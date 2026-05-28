@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VLZ Autoescuela - Aprendé a manejar con seguridad</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .whatsapp-green {
+            background-color: #25D366;
+        }
+        .whatsapp-green:hover {
+            background-color: #128C7E;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed": "#ffe16d",
+                      "on-primary": "#ffffff",
+                      "on-primary-fixed-variant": "#723600",
+                      "on-tertiary-fixed": "#1b1c1c",
+                      "on-secondary-fixed-variant": "#544600",
+                      "primary-fixed": "#ffdcc6",
+                      "tertiary": "#5f5e5e",
+                      "on-secondary-container": "#6e5c00",
+                      "inverse-surface": "#2f3131",
+                      "on-surface-variant": "#564336",
+                      "on-primary-container": "#5a2a00",
+                      "tertiary-fixed-dim": "#c8c6c6",
+                      "on-primary-fixed": "#311300",
+                      "on-error-container": "#93000a",
+                      "primary-container": "#f48221",
+                      "inverse-primary": "#ffb786",
+                      "error": "#ba1a1a",
+                      "surface-variant": "#e2e2e2",
+                      "surface": "#f9f9f9",
+                      "on-secondary-fixed": "#221b00",
+                      "error-container": "#ffdad6",
+                      "secondary-fixed-dim": "#e9c400",
+                      "background": "#f9f9f9",
+                      "surface-container-highest": "#e2e2e2",
+                      "secondary-container": "#fcd400",
+                      "on-secondary": "#ffffff",
+                      "primary-fixed-dim": "#ffb786",
+                      "tertiary-container": "#a2a0a0",
+                      "on-tertiary-container": "#373737",
+                      "on-error": "#ffffff",
+                      "outline-variant": "#ddc1b0",
+                      "on-surface": "#1a1c1c",
+                      "surface-tint": "#964900",
+                      "outline": "#8a7264",
+                      "inverse-on-surface": "#f1f1f1",
+                      "on-tertiary": "#ffffff",
+                      "surface-dim": "#dadada",
+                      "tertiary-fixed": "#e4e2e1",
+                      "surface-bright": "#f9f9f9",
+                      "surface-container-low": "#f3f3f3",
+                      "primary": "#964900",
+                      "secondary": "#705d00",
+                      "surface-container-high": "#e8e8e8",
+                      "on-tertiary-fixed-variant": "#474747",
+                      "surface-container": "#eeeeee",
+                      "surface-container-lowest": "#ffffff",
+                      "on-background": "#1a1c1c"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "max-width": "1280px",
+                      "unit": "8px",
+                      "margin-desktop": "64px",
+                      "gutter": "24px",
+                      "margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "body-md": ["Hanken Grotesk"],
+                      "title-md": ["Hanken Grotesk"],
+                      "label-sm": ["JetBrains Mono"],
+                      "headline-lg": ["Hanken Grotesk"],
+                      "body-lg": ["Hanken Grotesk"],
+                      "headline-lg-mobile": ["Hanken Grotesk"],
+                      "display-lg": ["Hanken Grotesk"]
+              },
+              "fontSize": {
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="bg-primary w-full z-50 static">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-max-width mx-auto">
+<div class="flex items-center gap-4">
+<img alt="VLZ Autoescuela Logo" class="h-16 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuXsl65XDnX40iP-GYxbsJUzjuobxRkpAR7GBHX-V6j5QDcMTHmXBmAuNbrbOfnGxlDfGFX3o_FICfaP0lTSRDTF4JegoenVIijZTvNnqxv-WB1DfPoxsITUGBy6qOgQh6ARmHk0VrHK8F-i8gD_TjinCXeBKjmq8pB0tlkfGwf7BRbUcrGxTm7KIsGLjYEL0pqnCUHbn7K2KG6AST5BYZxM5rdNyXudZspz5EqZj7JIuupHdXl-QW_2gc6jWbhfAZr3cIBC76-nU"/>
+<span class="text-title-md font-title-md font-black text-on-primary md:block hidden">VLZ Autoescuela</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-secondary-container font-bold border-b-2 border-secondary-container pb-1 font-label-sm text-label-sm hover:text-secondary-fixed transition-colors duration-200" href="#inicio">Inicio</a>
+<a class="text-on-primary opacity-90 font-label-sm text-label-sm hover:text-secondary-fixed transition-colors duration-200" href="#sobre-nosotros">Sobre Nosotros</a>
+<a class="text-on-primary opacity-90 font-label-sm text-label-sm hover:text-secondary-fixed transition-colors duration-200" href="#servicios">Servicios</a>
+<a class="text-on-primary opacity-90 font-label-sm text-label-sm hover:text-secondary-fixed transition-colors duration-200" href="#beneficios">Beneficios</a>
+<a class="text-on-primary opacity-90 font-label-sm text-label-sm hover:text-secondary-fixed transition-colors duration-200" href="#contacto">Contacto</a>
+</nav>
+<a class="whatsapp-green text-white px-6 py-2 rounded-full font-bold flex items-center gap-2 transition-transform active:scale-95 shadow-lg" href="https://wa.me/#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+<span class="hidden sm:inline">WhatsApp</span>
+</a>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="bg-primary py-20 relative overflow-hidden transition-all duration-1000 opacity-100 translate-y-0 opacity-0 translate-y-10" id="inicio">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row items-center gap-gutter relative z-10">
+<div class="w-full md:w-1/2 text-on-primary space-y-8">
+<h1 class="font-display-lg text-display-lg md:text-[56px] leading-tight">Aprendé a manejar con seguridad en Villa Luzuriaga</h1>
+<p class="font-body-lg text-body-lg opacity-90 max-w-xl">Cursos personalizados para principiantes y conductores nerviosos con autos doble comando. Tu confianza al volante empieza acá.</p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a class="whatsapp-green text-white px-8 py-4 rounded-lg font-bold flex items-center gap-3 text-lg transition-all hover:shadow-2xl hover:-translate-y-1" href="https://wa.me/#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+                            Quiero inscribirme
+                        </a>
+<a class="bg-transparent border-2 border-on-primary text-on-primary px-8 py-4 rounded-lg font-bold transition-all hover:bg-on-primary hover:text-primary" href="#contacto">
+                            Más información
+                        </a>
+</div>
+</div>
+<div class="w-full md:w-1/2 relative">
+<div class="aspect-video rounded-2xl overflow-hidden shadow-2xl border-4 border-on-primary/20 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A professional driving instructor in a modern white car with dual control pedals, teaching a focused young adult driver on a quiet street in Villa Luzuriaga. The scene is bathed in warm afternoon sunlight, creating a safe and encouraging atmosphere. The composition is clean and corporate, emphasizing safety and professional instruction with high-contrast colors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfUzsGHl_qlIW6ziLM6uoeOJB9uku0ER5W183kKuT76M0vkZAdXOxHTyt4iiAGPCsadpzmzat16sqW-ND8oFBjYDrG0cXXMrBzyFR9eLft-Clhq0SZiZFcpZN5c95Xmtri0_x2aVI_4ryDORWD213IPi3w1re60-qyk-Tu4m6IGB_lo6II-EYIAln4jXhHwOMfXbiHhwk9LKkXLfJYahnLa9od6E779Ys-y9oFqqYAFavrZk73eHvVpQ83UqRQxtP3VODWhLOHVYw"/>
+</div>
+<!-- Stats Floating Card -->
+<div class="absolute -bottom-6 -left-6 bg-secondary-container p-6 rounded-xl shadow-xl hidden lg:block">
+<p class="text-on-secondary-container font-black text-4xl">100%</p>
+<p class="text-on-secondary-container font-bold text-sm uppercase tracking-wider">De Aprobados</p>
+</div>
+</div>
+</div>
+<!-- Decorative Pattern -->
+<div class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
+<div class="w-full h-full" style="background-image: radial-gradient(circle, #fff 1px, transparent 1px); background-size: 32px 32px;"></div>
+</div>
+</section>
+<!-- Sobre Nosotros -->
+<section class="py-24 bg-surface transition-all duration-1000 opacity-100 translate-y-0 opacity-0 translate-y-10" id="sobre-nosotros">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary-container/10 text-primary rounded-full font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm">verified</span>
+                        NUESTRA EXPERIENCIA
+                    </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Tu camino comienza con el dominio del volante</h2>
+<p class="text-on-surface-variant text-body-lg">Entendemos que el proceso de aprender a manejar puede ser estresante. Por eso, en VLZ Autoescuela nos especializamos en transformar ese miedo en confianza a través de un método paciente y estructurado.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-primary">psychology</span>
+<div>
+<h4 class="font-bold">Instructores Pacientes</h4>
+<p class="text-sm text-on-surface-variant">Expertos en alumnos nerviosos.</p>
+</div>
+</div>
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-primary">directions_car</span>
+<div>
+<h4 class="font-bold">Flota Moderna</h4>
+<p class="text-sm text-on-surface-variant">Autos equipados con doble comando.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative h-[400px] flex items-center justify-center">
+<img alt="Autoescuela VLZ Car" class="max-w-full max-h-full object-contain drop-shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGd6EM04TE1oZ5Ca87MUxxJ_G1nq5jFTLwucSG7IZGp8vZq-NmDh2VpMg0hOzxZ4yD7Wv4FPvhUnPmeABcSJ4KCrrHguZjWwkWeav1J_kq4CUAEDWIrLMX5SlYCMb1AoY_GiV5o7II4_wM7a3gghKWAH30DqHUcDFNwsF-Qmoy_TT9Bqx938vWIl02FM6NDy0tOQoCRu47DBhkAMiHuKXSTSSLxtNj-hSomA40GGHzpN1TAkEnP-61q-Jkn_5JOx0d5hEzsRHDi1g"/>
+</div>
+</div>
+</section>
+<!-- Servicios (Bento Grid Style) -->
+<section class="py-24 bg-surface-container-low transition-all duration-1000 opacity-100 translate-y-0 opacity-0 translate-y-10" id="servicios">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4">Planes de Entrenamiento</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Diseñamos cada curso pensando en tu nivel actual y tus objetivos específicos.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter"><!-- Pack 4 Clases -->
+<div class="bg-white p-6 rounded-2xl shadow-sm border border-outline-variant hover:border-primary transition-all flex flex-col group">
+<div class="flex-grow">
+<h3 class="text-title-md font-bold mb-2">Pack 4 Clases</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Ideal para refrescar conceptos básicos o conductores nerviosos.</p>
+</div>
+<a class="text-primary font-bold flex items-center gap-1 text-sm group-hover:gap-2 transition-all mt-4" href="https://wa.me/#">
+        Consultar <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div>
+<!-- Pack 8 Clases -->
+<div class="bg-white p-6 rounded-2xl shadow-sm border border-outline-variant hover:border-primary transition-all flex flex-col group">
+<div class="flex-grow">
+<h3 class="text-title-md font-bold mb-2">Pack 8 Clases</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Perfecto para quienes están empezando desde cero.</p>
+</div>
+<a class="text-primary font-bold flex items-center gap-1 text-sm group-hover:gap-2 transition-all mt-4" href="https://wa.me/#">
+        Consultar <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div>
+<!-- Pack 10 Clases -->
+<div class="bg-white p-6 rounded-2xl shadow-sm border border-outline-variant border-primary-container ring-1 ring-primary-container/20 flex flex-col group relative">
+<div class="absolute -top-3 left-4 bg-primary text-white text-[10px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">MÁS POPULAR</div>
+<div class="flex-grow">
+<h3 class="text-title-md font-bold mb-2">Pack 10 Clases</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">La opción más elegida por principiantes en Villa Luzuriaga.</p>
+</div>
+<a class="text-primary font-bold flex items-center gap-1 text-sm group-hover:gap-2 transition-all mt-4" href="https://wa.me/#">
+        Consultar <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div>
+<!-- Pack 16 Clases -->
+<div class="bg-white p-6 rounded-2xl shadow-sm border border-outline-variant hover:border-primary transition-all flex flex-col group">
+<div class="flex-grow">
+<h3 class="text-title-md font-bold mb-2">Pack 16 Clases</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Entrenamiento integral para una conducción segura y responsable.</p>
+</div>
+<a class="text-primary font-bold flex items-center gap-1 text-sm group-hover:gap-2 transition-all mt-4" href="https://wa.me/#">
+        Consultar <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div>
+<!-- Pack 20 Clases -->
+<div class="bg-white p-6 rounded-2xl shadow-sm border border-outline-variant hover:border-primary transition-all flex flex-col group">
+<div class="flex-grow">
+<h3 class="text-title-md font-bold mb-2">Pack 20 Clases</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Curso intensivo para lograr una confianza total en la calle.</p>
+</div>
+<a class="text-primary font-bold flex items-center gap-1 text-sm group-hover:gap-2 transition-all mt-4" href="https://wa.me/#">
+        Consultar <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div>
+<!-- Pack 24 Clases -->
+<div class="bg-white p-6 rounded-2xl shadow-sm border border-outline-variant hover:border-primary transition-all flex flex-col group">
+<div class="flex-grow">
+<h3 class="text-title-md font-bold mb-2">Pack 24 Clases</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Maestría completa, incluye simulación y maniobras avanzadas.</p>
+</div>
+<a class="text-primary font-bold flex items-center gap-1 text-sm group-hover:gap-2 transition-all mt-4" href="https://wa.me/#">
+        Consultar <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div>
+<!-- Alquiler de Auto -->
+<div class="bg-white p-6 rounded-2xl shadow-sm border border-outline-variant hover:border-primary transition-all flex flex-col group">
+<div class="flex-grow">
+<h3 class="text-title-md font-bold mb-2">Alquiler de Auto</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Te acompañamos al examen con auto doble comando.</p>
+</div>
+<a class="text-primary font-bold flex items-center gap-1 text-sm group-hover:gap-2 transition-all mt-4" href="https://wa.me/#">
+        Consultar <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div>
+<!-- Clases Adicionales -->
+<div class="bg-white p-6 rounded-2xl shadow-sm border border-outline-variant hover:border-primary transition-all flex flex-col group">
+<div class="flex-grow">
+<h3 class="text-title-md font-bold mb-2">Clases Adicionales</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Práctica enfocada en áreas específicas que desees mejorar.</p>
+</div>
+<a class="text-primary font-bold flex items-center gap-1 text-sm group-hover:gap-2 transition-all mt-4" href="https://wa.me/#">
+        Consultar <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div></div>
+</div>
+</section>
+<!-- Beneficios -->
+<section class="py-24 bg-white transition-all duration-1000 opacity-100 translate-y-0 opacity-0 translate-y-10" id="beneficios">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
+<div class="space-y-4">
+<div class="w-16 h-16 bg-secondary-container rounded-full flex items-center justify-center mx-auto shadow-md">
+<span class="material-symbols-outlined text-on-secondary-container" style="font-size: 32px;">verified_user</span>
+</div>
+<h4 class="font-bold text-lg">Seguridad</h4>
+<p class="text-sm text-on-surface-variant">Autos equipados y seguros vigentes.</p>
+</div>
+<div class="space-y-4">
+<div class="w-16 h-16 bg-secondary-container rounded-full flex items-center justify-center mx-auto shadow-md">
+<span class="material-symbols-outlined text-on-secondary-container" style="font-size: 32px;">patient_list</span>
+</div>
+<h4 class="font-bold text-lg">Paciencia</h4>
+<p class="text-sm text-on-surface-variant">Sin gritos ni presiones. A tu ritmo.</p>
+</div>
+<div class="space-y-4">
+<div class="w-16 h-16 bg-secondary-container rounded-full flex items-center justify-center mx-auto shadow-md">
+<span class="material-symbols-outlined text-on-secondary-container" style="font-size: 32px;">calendar_month</span>
+</div>
+<h4 class="font-bold text-lg">Flexibilidad</h4>
+<p class="text-sm text-on-surface-variant">Horarios que se adaptan a tu rutina.</p>
+</div>
+<div class="space-y-4">
+<div class="w-16 h-16 bg-secondary-container rounded-full flex items-center justify-center mx-auto shadow-md">
+<span class="material-symbols-outlined text-on-secondary-container" style="font-size: 32px;">location_on</span>
+</div>
+<h4 class="font-bold text-lg">Cercanía</h4>
+<p class="text-sm text-on-surface-variant">En el corazón de Villa Luzuriaga.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonios -->
+<section class="py-24 bg-surface-container-highest transition-all duration-1000 opacity-100 translate-y-0 opacity-0 translate-y-10">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 text-center md:text-left">
+<h2 class="font-headline-lg text-headline-lg">Nuestros alumnos opinan</h2>
+<p class="text-on-surface-variant">La satisfacción de quienes ya aprendieron con nosotros.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white p-4 rounded-xl shadow-lg transform hover:-rotate-1 transition-transform">
+<img alt="Testimonio de alumno 1" class="w-full h-auto rounded-lg mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMiDiHX7plX3QSq4E6q9Py1ITtdIK7GPNkMw0CrScJhJe9GMngetypXtXtfupCX_gmVT7wZYAkZOwze_Iz5IuyQNpQOnUvpRFksaPMvhdxHdBX5_-IyKY085zBjVF0WiW1PIxscvLFWrK1C0LODqoOgMijH9cun3ca6G0AZjBb6R_w9NZ34PwD5NqGjSiroGEWE1tLaJ9GkKeH95S-Z3ofqm_Xfiu-McqFI99-RBC-NffjQzbToyFGr7819J7il-gzaIargFI6qN4"/>
+<p class="text-sm italic text-on-surface-variant">"Excelente atención y mucha paciencia. Me sentía muy nerviosa al principio pero los instructores son unos genios."</p>
+</div>
+<div class="bg-white p-4 rounded-xl shadow-lg transform hover:rotate-1 transition-transform">
+<img alt="Testimonio de alumno 2" class="w-full h-auto rounded-lg mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN4azIyIlAQXp0_ymQIH_EPcPBWSTF-DJ553Y_BX2VJjD3lMaGBByzn0H-NlN8aoo3Juh7SDdAjzYP1V1kKY9lKz9lFEwGdRMtlRgxuk2emE9v95Tw0a2fSlDKiS8wIS-1qPbf1zMDoFZthzBCv7SQAZja7Y7sQR1YLiBTb0M_1WZLX12eZPux8mat9FD-oiCpXK_n8QfGLEhoTZ1P2_SJaccOOq_Hwht_lLld0S7sa_QoCKg_OooicKzo0BsJEhgANUsmx6E39kU"/>
+<p class="text-sm italic text-on-surface-variant">"Las clases son muy claras y el auto está impecable. Súper recomendado para los que vivimos en la zona."</p>
+</div>
+<div class="bg-white p-4 rounded-xl shadow-lg transform hover:-rotate-1 transition-transform">
+<img alt="Testimonio de alumno 3" class="w-full h-auto rounded-lg mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiY9BeGU6hbJ30iO-at1IAM1qvu-WrrFfVD406M6ufFzDt5h31VqsriO_pzK7W4QrEWlK_-CUq9EB6gNKPw4xfwwqZ0dlbRd05oJwwQrWAdZ3tqqPTltaYY_dfNP8BsXhpmGsoAhT5BE_zzWl6FS2eySi00eYSIKocbZBI0x3dkO_zTQJCZXtgdNICEmP2OLnB0lhhvDxZuXhfcM2vyZrfbqM2cUSOPvPX0K3qLuPySQsTY6h8fTIKrqR6Cj8qRu8jmwqfXDxeG_o"/>
+<p class="text-sm italic text-on-surface-variant">"Me prepararon para el examen y aprobé a la primera. La mejor decisión para sacarme el miedo al tránsito."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Ubicación -->
+<section class="py-24 bg-white transition-all duration-1000 opacity-100 translate-y-0 opacity-0 translate-y-10">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-12">
+<div class="space-y-8">
+<h2 class="font-headline-lg text-headline-lg">¿Dónde estamos?</h2>
+<div class="space-y-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<div>
+<h4 class="font-bold">Dirección</h4>
+<p class="text-on-surface-variant">Triunvirato 2310, Villa Luzuriaga, Buenos Aires.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">public</span>
+<div>
+<h4 class="font-bold">Zonas de Influencia</h4>
+<p class="text-on-surface-variant">Villa Luzuriaga, San Justo, Haedo, Ramos Mejía.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<div>
+<h4 class="font-bold">Horarios de Atención</h4>
+<p class="text-on-surface-variant">Lunes a Viernes: 08:30 - 19:30</p>
+<p class="text-on-surface-variant">Sábados: 8:30 - 14:00 </p>
+</div>
+</div>
+</div>
+</div>
+<div class="h-[400px] rounded-2xl overflow-hidden border border-outline shadow-inner bg-surface-container">
+<div class="w-full h-full grayscale hover:grayscale-0 transition-all duration-700">
+<img class="w-full h-full object-cover" data-alt="A clean, stylized map view showing the area around Triunvirato 2310 in Villa Luzuriaga. The map features clear street names, a prominent location marker in the brand's primary orange color, and subtle highlights on surrounding landmarks. The design is modern and minimalist with a corporate aesthetic." data-location="Villa Luzuriaga" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzrVd4032EFWbX1xNz5cGpjv2KT5Wbc6eNuFIABgviJGoERYEhkD0QnlvsgJ82MJq-CRoMnM3rBbrKr2U0wVTrq8enU6C5E2D7C1UQ7ISY6fdQRh2juISNuJB5WLuUWLS0QSjMvLtg1oToEy2YUFbyaoYWzixK7f9u3IRWmNzPcBA3H1Sl6PinGDwL4uJJ87ezJkd7_unTclCAmKxwwKM_Q9R-qlzIN92WIUvisZIwzZ2SnjN9S3bt1iMf32A7oR6eXlnAD1F3YoA"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Contacto -->
+<section class="py-24 bg-surface-container-low transition-all duration-1000 opacity-100 translate-y-0 opacity-0 translate-y-10" id="contacto">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="bg-white rounded-3xl shadow-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-2">
+<div class="p-12 bg-primary text-on-primary">
+<h2 class="font-headline-lg text-headline-lg mb-6">Empezá hoy mismo</h2>
+<p class="opacity-90 mb-12">Completá el formulario o escribinos por WhatsApp para coordinar tu primera clase. Tu seguridad al volante está más cerca de lo que pensás!</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">call</span>
+</div>
+<span class="font-bold">+54 11 3943-8082</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<span class="font-bold">info@vlzautoescuela.com.ar</span>
+</div>
+</div>
+<div class="mt-16 p-6 bg-white/10 rounded-xl border border-white/20">
+<h4 class="font-bold mb-2">Importante:</h4>
+<p class="text-sm opacity-80">Contamos con retiro a domicilio para que no tengas que preocuparte por el traslado en tus primeras clases.</p>
+</div>
+</div>
+<div class="p-12 flex flex-col items-center justify-center text-center space-y-6">
+<div class="space-y-3">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">¡Escribinos!</h2>
+<p class="text-on-surface-variant text-body-md max-w-sm mx-auto">Consultá por nuestros packs personalizados y empezá a manejar hoy mismo.</p>
+</div>
+<a class="whatsapp-green text-white px-8 py-4 rounded-xl font-bold flex items-center gap-3 transition-all hover:shadow-xl hover:-translate-y-0.5 active:scale-95 shadow-lg" href="https://wa.me/#">
+<span class="material-symbols-outlined" style="font-size: 24px; font-variation-settings: 'FILL' 1;">chat</span>
+<span>Enviar WhatsApp</span>
+</a>
+<div class="pt-4 border-t border-outline-variant w-full max-w-xs">
+<p class="text-sm text-on-surface-variant italic">Respondemos todas tus dudas al instante.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-12 gap-gutter max-w-max-width mx-auto">
+<div class="flex flex-col items-center md:items-start gap-4">
+<span class="text-title-md font-title-md font-bold text-primary">VLZ Autoescuela</span>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs text-center md:text-left">© VLZ Autoescuela. Villa Luzuriaga. Todos los derechos reservados.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<div class="flex flex-col gap-2">
+
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">Legal</span>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Privacidad</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- WhatsApp Floating Action Button -->
+<a class="fixed bottom-8 right-8 whatsapp-green text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl z-[100] transition-transform hover:scale-110 active:scale-95" href="https://wa.me/#">
+<span class="material-symbols-outlined" style="font-size: 32px; font-variation-settings: 'FILL' 1;">chat</span>
+</a>
+<script>
+        // Simple micro-interaction for scroll reveals
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body></html>
